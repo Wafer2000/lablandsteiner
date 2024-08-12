@@ -9,7 +9,7 @@ const Carousel = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setSlideIndex((slideIndex + 1) % 4); // 4 is the number of images
-    }, 2000); // Change image every 2 seconds
+    }, 3500); // Change image every 2 seconds
     return () => clearInterval(intervalId);
   }, [slideIndex]);
 
@@ -36,14 +36,14 @@ const Carousel = () => {
   return (
     <section
       id="Carousel"
-      className="relative w-full h-[200px] sm:h-[400px] md:h-[480px] lg:h-[650px] xl:h-[750px]"
+      className="relative w-full h-[200px] sm:h-[400px] md:h-[480px] lg:h-[650px] xl:h-[850px] pt-10"
       onMouseOver={handleMouseOver}
       onMouseLeave={handleMouseLeave}
     >
       {[1, 2, 3, 4].map((index) => (
         <img
           key={index}
-          src={`/carousel_${index}.jpg`}
+          src={`/PAQUETES AGOSTO-0${index}.jpg`}
           alt="Imagen de fondo"
           className={`absolute object-cover w-[100%] h-auto ${
             slideIndex === index - 1 ? "block" : "hidden"
@@ -93,22 +93,6 @@ const Carousel = () => {
         >
           ❯
         </button>
-      </div>
-      <div style={{ textAlign: "center" }}>
-        {[1, 2, 3, 4].map((index) => (
-          <span
-            key={index}
-            className={`dot ${slideIndex === index - 1 ? "active" : ""}`}
-            onClick={() => handleDotClick(index)}
-            style={{
-              fontSize: "18px",
-              padding: "6px 12px",
-              borderRadius: "50%",
-              backgroundColor: "#ccc",
-              cursor: "pointer",
-            }}
-          />
-        ))}
       </div>
     </section>
   );
