@@ -18,8 +18,10 @@ export default function Home() {
         <Navbar />
         <main className="relative overflow-hidden">
           <Inicio />
-          <Carousel />
-          <NuestrosServicios />
+          <div className="flex flex-wrap justify-center">
+            <Carousel />
+            <NuestrosServicios />
+          </div>
           <Paquetes />
           <SaludOcupacional />
           <QuienesSomos />

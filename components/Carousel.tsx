@@ -36,7 +36,7 @@ const Carousel = () => {
   return (
     <section
       id="Carousel"
-      className="relative w-full h-[200px] sm:h-[400px] md:h-[480px] lg:h-[650px] xl:h-[850px] pt-10"
+      className="relative w-full h-[200px] sm:h-[400px] md:h-[480px] lg:h-[650px] xl:h-[950px] pt-10"
       onMouseOver={handleMouseOver}
       onMouseLeave={handleMouseLeave}
     >
